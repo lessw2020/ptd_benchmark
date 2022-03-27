@@ -32,10 +32,10 @@ import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel
 from torch.distributed.pipeline.sync import Pipe
 from torch.profiler import profile, record_function, ProfilerActivity, tensorboard_trace_handler
-from torch.distributed._fsdp.wrap import enable_wrap, wrap
-from torch.distributed._fsdp import FullyShardedDataParallel as FSDP, CPUOffload
-from torch.distributed._fsdp.fully_sharded_data_parallel import BackwardPrefetch_
-from fairscale.nn.data_parallel import FullyShardedDataParallel as fairscale_fsdp
+from torch.distributed.fsdp.wrap import enable_wrap, wrap
+from torch.distributed.fsdp import FullyShardedDataParallel as FSDP, CPUOffload
+#from torch.distributed.fsdp import BackwardPrefetch_
+#from fairscale.nn.data_parallel import FullyShardedDataParallel as fairscale_fsdp
 
 @dataclass
 class TrainConfig:

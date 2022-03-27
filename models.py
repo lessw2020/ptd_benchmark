@@ -17,7 +17,7 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-from torch.distributed._fsdp.wrap import wrap
+from torch.distributed.fsdp.wrap import wrap
 
 rank = int(os.getenv("RANK", "0"))
 
@@ -27,8 +27,8 @@ try:
         print("Using PT checkpoint_wrapper")
 except ImportError:
     if rank == 0:
-        print("Falling back to Fairscale checkpoint")
-    from fairscale.nn.checkpoint import checkpoint_wrapper
+        print("Unable to load PyTorch wrapper...failing rather than Falling back to Fairscale checkpoint")
+    #from fairscale.nn.checkpoint import checkpoint_wrapper
 
 logger = logging.getLogger(__name__)
 
