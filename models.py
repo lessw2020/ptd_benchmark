@@ -22,7 +22,7 @@ from torch.distributed.fsdp.wrap import wrap
 rank = int(os.getenv("RANK", "0"))
 
 try:
-    from torch.distributed.algorithms._checkpoint._checkpoint_wrapper import (
+    from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
         checkpoint_wrapper,
     )
 
