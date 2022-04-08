@@ -1,4 +1,5 @@
 # PyTorch Data Parallel Benchmark
+## updated for fsdp mix precision
 
 ### Files
 * `models.py` contains 5 main components
