@@ -1,0 +1,5 @@
+delays = 4.69 (0.00)
+tflops/gpu = 0.71 (0.00)
+max mem = 14.0GB
+max cpu mem percent = 5.7
+forward percent = 16.21, backward percent = 82.74, optimizer percent = 1.05
